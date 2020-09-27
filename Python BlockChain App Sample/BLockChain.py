@@ -14,8 +14,9 @@ class Block(object):
         string_block = "{}{}{}{}{}".format(self.index, self.proof_number, self.previous_hash, self.data, self.timestamp)
         return hashlib.sha256(string_block.encode()).hexdigest()
 
+    # Print Block and its current hash
     def __repr__(self):
-        return "{} - {} - {} - {} - {}".format(self.index, self.proof_number, self.previous_hash, self.data, self.timestamp)
+        return "{} - {} - {} - {} - {}- {}".format(self.index, self.proof_number,self.compute_hash, self.previous_hash, self.data, self.timestamp)
 
 class BlockChain(object):
 
