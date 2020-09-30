@@ -58,17 +58,13 @@ class BlockChain(object):
         })
         return True
 
-    @staticmethod
+    @staticmethod #Class method . Need to create object of a class and call the method
     def proof_of_work(last_proof):
         pass
 
-    @property
+    @property   #Returns the latest block (Work as a getter)
     def latest_block(self):
         return self.chain[-1]
-
-    def chain_validity(self):
-        pass
-
 
     def create_node(self, address):
         self.nodes.add(address)
